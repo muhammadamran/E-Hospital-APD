@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/mode/images/favicon.png">
-    <title>BODJ Rawat Inap | Dashboard</title>
-    <link href="assets/mode/extra-libs/c3/c3.min.css" rel="stylesheet">
-    <link href="assets/mode/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link href="assets/mode/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <link href="assets/mode/dist/css/style.min.css" rel="stylesheet">
-    <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
-    <link href="assets/mode/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/vendors/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/vendors/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/vendors/images/favicon-16x16.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/vendors/styles/core.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendors/styles/icon-font.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/src/plugins/datatables/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendors/styles/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119386393-1');
+  </script>
 </head>
 <style type="text/css">
-	.lingkaran{
-		width: 200px;
-		height: 200px;
-		background: #fff;
-		/* border-radius: 100%; */
-	}
+  .lingkaran{
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    /* border-radius: 100%; */
+  }
 
   .lingkaran-detail{
     width: 200px;
@@ -34,12 +41,12 @@
   function display_c(){
   var refresh=1000; // Refresh rate in milli seconds
   mytime=setTimeout('display_ct()',refresh)
-  }
-  function display_ct() {
+}
+function display_ct() {
   var x = new Date()
   document.getElementById('ct').innerHTML = x;
   display_c();
-  }
+}
 </script>
 <?php
 function tanggal_indo($tanggal, $cetak_hari = false)
@@ -77,13 +84,16 @@ function tanggal_indo($tanggal, $cetak_hari = false)
   return $tgl_indo;
 }
 ?>
-<body onload=display_ct();>
-	<div class="preloader">
-        <div class="lds-ripple">
-            <div class="lds-pos"></div>
-            <div class="lds-pos"></div>
-        </div>
-	</div>
-	<div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
-	
+<body>
+  <div class="pre-loader">
+    <div class="pre-loader-box">
+      <div class="loader-logo"><img src="assets/vendors/images/deskapp-logo.png" alt=""></div>
+      <div class='loader-progress' id="progress_div">
+        <div class='bar' id='bar1'></div>
+      </div>
+      <div class='percent' id='percent1'>0%</div>
+      <div class="loading-text">
+        Loading...
+      </div>
+    </div>
+  </div>

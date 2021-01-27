@@ -1,10 +1,13 @@
 <?php
-$servername = "localhost";
-$username = "root";
-// $servername = "192.168.55.164";
-// $username = "client";
-$password = "";
-$dbname = "db_soap";
+$servername = "203.210.84.231:108";
+// $servername = "192.168.55.108";
+$username = "client";
+$password = "rskg";
+$dbname = "sik";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "sik";
 
 $db = new mysqli($servername, $username, $password, $dbname);
 

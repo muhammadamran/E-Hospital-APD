@@ -1,6 +1,11 @@
 ###################
-Aplikasi Buku Operan Dokter Jaga Rawat Inap RS. Khusus Ginjal Ny.R.A. Habibie 
+Aplikasi E-Hospital APD RS. Khusus Ginjal Ny.R.A. Habibie 
 ###################
+
+*******************
+Author: Muhammad Amran
+Contacy: amranhakimsiregar@gmail.com
+*******************
 
 *******************
 Release Information
