@@ -11,76 +11,42 @@
     <div class="menu-block customscroll">
         <div class="sidebar-menu">
             <ul id="accordion-menu">
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
+                <li>
+                    <a href="index.php" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                     </a>
-                    <ul class="submenu">
-                        <li><a href="index.html">Dashboard style 1</a></li>
-                        <li><a href="index2.html">Dashboard style 2</a></li>
-                    </ul>
                 </li>
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-edit2"></span><span class="mtext">Forms</span>
+                        <span class="micon dw dw-edit2"></span><span class="mtext">Data Instansi</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="form-basic.html">Form Basic</a></li>
-                        <li><a href="advanced-components.html">Advanced Components</a></li>
-                        <li><a href="form-wizard.html">Form Wizard</a></li>
-                        <li><a href="html5-editor.html">HTML5 Editor</a></li>
-                        <li><a href="form-pickers.html">Form Pickers</a></li>
-                        <li><a href="image-cropper.html">Image Cropper</a></li>
-                        <li><a href="image-dropzone.html">Image Dropzone</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-library"></span><span class="mtext">Tables</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="basic-table.html">Basic Tables</a></li>
-                        <li><a href="datatable.html">DataTables</a></li>
+                        <li><a href="form-basic.html">Data Rawat Jalan</a></li>
+                        <li><a href="advanced-components.html">Data Rawat Inap</a></li>
+                        <li><a href="form-wizard.html">Data Hemodialisa</a></li>
+                        <li><a href="html5-editor.html">Data OK</a></li>
                     </ul>
                 </li>
                 <li>
+                    <a href="aa.html" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-library"></span><span class="mtext">Pengunjung</span>
+                    </a>
+                </li>
+                <li>
                     <a href="calendar.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-calendar1"></span><span class="mtext">Calendar</span>
+                        <span class="micon dw dw-calendar1"></span><span class="mtext">Farmasi</span>
                     </a>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-apartment"></span><span class="mtext"> UI Elements </span>
+                <li>
+                    <a href="aa.html" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-paint-brush"></span><span class="mtext">Radiologi</span>
                     </a>
-                    <ul class="submenu">
-                        <li><a href="ui-buttons.html">Buttons</a></li>
-                        <li><a href="ui-cards.html">Cards</a></li>
-                        <li><a href="ui-cards-hover.html">Cards Hover</a></li>
-                        <li><a href="ui-modals.html">Modals</a></li>
-                        <li><a href="ui-tabs.html">Tabs</a></li>
-                        <li><a href="ui-tooltip-popover.html">Tooltip &amp; Popover</a></li>
-                        <li><a href="ui-sweet-alert.html">Sweet Alert</a></li>
-                        <li><a href="ui-notification.html">Notification</a></li>
-                        <li><a href="ui-timeline.html">Timeline</a></li>
-                        <li><a href="ui-progressbar.html">Progressbar</a></li>
-                        <li><a href="ui-typography.html">Typography</a></li>
-                        <li><a href="ui-list-group.html">List group</a></li>
-                        <li><a href="ui-range-slider.html">Range slider</a></li>
-                        <li><a href="ui-carousel.html">Carousel</a></li>
-                    </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-paint-brush"></span><span class="mtext">Icons</span>
+                <li>
+                    <a href="aa.html" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-paint-brush"></span><span class="mtext">Laboratorium</span>
                     </a>
-                    <ul class="submenu">
-                        <li><a href="font-awesome.html">FontAwesome Icons</a></li>
-                        <li><a href="foundation.html">Foundation Icons</a></li>
-                        <li><a href="ionicons.html">Ionicons Icons</a></li>
-                        <li><a href="themify.html">Themify Icons</a></li>
-                        <li><a href="custom-icon.html">Custom Icons</a></li>
-                    </ul>
-                </li>
+                <!-- </li>
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
                         <span class="micon dw dw-analytics-21"></span><span class="mtext">Charts</span>
@@ -172,7 +138,7 @@
                 </li>
                 <li>
                     <div class="dropdown-divider"></div>
-                </li>
+                </li> -->
                 <li>
                     <div class="sidebar-small-cap">Extra</div>
                 </li>
