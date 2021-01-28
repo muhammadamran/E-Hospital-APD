@@ -5,6 +5,9 @@ Aplikasi E-Hospital APD RS. Khusus Ginjal Ny.R.A. Habibie
 *******************
 Author: Muhammad Amran
 Contacy: amranhakimsiregar@gmail.com
+
+Author: Rayhan Prasetya
+Contacy: rayhan.prasetya@gmail.com
 *******************
 
 *******************
