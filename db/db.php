@@ -1,6 +1,6 @@
 <?php
-// $servername = "203.210.84.231:108";
-$servername = "192.168.55.108";
+$servername = "203.210.84.231:108";
+// $servername = "192.168.55.108";
 $username = "client";
 $password = "rskg";
 $dbname = "sik";
