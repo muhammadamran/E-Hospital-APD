@@ -1,6 +1,7 @@
 <div class="header">
     <div class="header-left">
         <div class="menu-icon dw dw-menu"></div>
+        &nbsp;&nbsp;&nbsp;<span class="micon dw dw-wall-clock1"></span> &nbsp;<span id='ct' ></span>
     </div>
     <div class="header-right">
         <div class="dashboard-setting user-notification">
@@ -72,18 +73,17 @@
                     <span class="user-icon">
                         <img src="https://www.smkn2terbanggibesar.sch.id/wp-content/uploads/2018/06/avatar.png" alt="">
                     </span>
-                    <span class="user-name"><?= $_SESSION['nama']; ?></span>
+                    <span class="user-name">
+                        <?= $_SESSION['nama']; ?>
+                    </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                     <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
                     <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
                     <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
-                    <a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Log Out</a>
+                    <a class="dropdown-item" href="logout.php"><i class="dw dw-logout"></i> Log Out</a>
                 </div>
             </div>
-        </div>
-        <div class="github-link">
-            <a href="https://github.com/dropways/deskapp" target="_blank"><img src="assets/vendors/images/github.svg" alt=""></a>
         </div>
     </div>
 </div>

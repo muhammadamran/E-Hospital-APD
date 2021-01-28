@@ -29,12 +29,9 @@ $result = $user->fetch_assoc();
 
 $id = $result['id'];
 $password = $result['password'];
-$foto = $result['foto'];
 $nama = $result['nama'];
 $tmp_lahir = $result['tmp_lahir'];
 $tgl_lahir = $result['tgl_lahir'];
-$usia = $result['usia'];
-$agama = $result['agama'];
 $jk = $result['jk'];
 $stts_wp = $result['stts_wp'];
 $stts_kerja = $result['stts_kerja'];
@@ -50,7 +47,6 @@ $data = [
   'nama' => $nama,
   'tmp_lahir' => $tmp_lahir,
   'tgl_lahir' => $tgl_lahir,
-  'agama' => $agama,
   'jk' => $jk,
   'stts_wp' => $stts_wp,
   'stts_kerja' => $stts_kerja,
@@ -68,7 +64,7 @@ $loginArea = login($data);
 if ($loginArea == 2) {
   echo '<script>alert("Hello, ' . $nama . '. kamu berhasil login");location.href = "index.php"</script>';
 } else if ($loginArea == 1) {
-  echo '<script>alert("Gagal Login");window.history.go(-1);</script>';
-  header("Location: ./notfound.php");
+  echo '<script>alert("Gagal Login | Periksa Kembali NIP atau Password anda!");window.history.go(-1);</script>';
+  // header("Location: ./notfound.php");
 }
 ?>

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+  <title>EHospitalAPD - &copy; RS. Khusus Ginjal Ny.R.A. Habibie </title>
   <link rel="apple-touch-icon" sizes="180x180" href="assets/vendors/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/vendors/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/vendors/images/favicon-16x16.png">
@@ -21,6 +21,17 @@
 
     gtag('config', 'UA-119386393-1');
   </script>
+  <script type="text/javascript"> 
+    function display_c(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_ct()',refresh)
+    }
+    function display_ct() {
+    var x = new Date()
+    document.getElementById('ct').innerHTML = x;
+    display_c();
+    }
+</script>
 </head>
 <style type="text/css">
   .lingkaran{
@@ -84,7 +95,22 @@ function tanggal_indo($tanggal, $cetak_hari = false)
   return $tgl_indo;
 }
 ?>
-<body>
+<?php
+date_default_timezone_set("Asia/Jakarta");
+
+$jam = date('H:i');
+
+if ($jam > '05:30' && $jam < '10:00') {
+	$salam = 'Pagi';
+} elseif ($jam >= '10:00' && $jam < '15:00') {
+	$salam = 'Siang';
+} elseif ($jam < '18:00') {
+	$salam = 'Sore';
+} else {
+	$salam = 'Malam';
+}
+?>
+<body onload=display_ct();>
   <div class="pre-loader">
     <div class="pre-loader-box">
       <div class="loader-logo"><img src="assets/vendors/images/deskapp-logo.png" alt=""></div>
