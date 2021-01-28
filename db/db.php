@@ -1,6 +1,6 @@
 <?php
-$servername = "203.210.84.231:108";
-// $servername = "192.168.55.108";
+// $servername = "203.210.84.231:108";
+$servername = "192.168.55.108";
 $username = "client";
 $password = "rskg";
 $dbname = "sik";
@@ -14,6 +14,17 @@ $db = new mysqli($servername, $username, $password, $dbname);
 if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 } 
+
+
+$host        = "host = 192.168.55.127";
+$port        = "port = 5432";
+$dbnamee      = "dbname = db_rskg_running20200103";
+$credentials = "user = postgres password=postgres";
+
+$pg = pg_connect( "$host $port $dbnamee $credentials"  );
+if(!$pg) {
+   echo "Error : Unable to open database\n";
+}
 
 class helpers {
   function dateIndonesia($date) {
