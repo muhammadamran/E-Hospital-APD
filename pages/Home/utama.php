@@ -1,18 +1,3 @@
-<?php
-date_default_timezone_set("Asia/Jakarta");
-
-$jam = date('H:i');
-
-if ($jam > '05:30' && $jam < '10:00') {
-	$salam = 'Pagi';
-} elseif ($jam >= '10:00' && $jam < '15:00') {
-	$salam = 'Siang';
-} elseif ($jam < '18:00') {
-	$salam = 'Sore';
-} else {
-	$salam = 'Malam';
-}
-?>
 <div class="main-container">
 	<div class="pd-ltr-20">
 		<div class="card-box pd-20 height-100-p mb-30">
@@ -22,7 +7,7 @@ if ($jam > '05:30' && $jam < '10:00') {
 				</div>
 				<div class="col-md-8">
 					<h4 class="font-20 weight-500 mb-10 text-capitalize">
-						Welcome back <div class="weight-600 font-30 text-blue">Johnny Brown!</div>
+						<?= 'Selamat&nbsp;'. $salam; ?>,  <div class="weight-600 font-30 text-blue"><?= $_SESSION['nama'];?></div>
 					</h4>
 					<p class="font-18 max-width-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde hic non repellendus debitis iure, doloremque assumenda. Autem modi, corrupti, nobis ea iure fugiat, veniam non quaerat mollitia animi error corporis.</p>
 				</div>
@@ -148,8 +133,3 @@ if ($jam > '05:30' && $jam < '10:00') {
 				</tbody>
 			</table>
 		</div>
-		<div class="footer-wrap pd-20 mb-20 card-box">
-			DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
-		</div>
-	</div>
-</div>

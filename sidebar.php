@@ -11,153 +11,65 @@
     <div class="menu-block customscroll">
         <div class="sidebar-menu">
             <ul id="accordion-menu">
+                <br>
                 <li>
+                    <div class="sidebar-small-cap">Menu</div>
+                </li>
+                <li class="dropdown <?= empty($_GET['m']) ? 'show' : '' ?>">
                     <a href="index.php" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
+                        <span class="micon dw dw-analytics-11"></span><span class="mtext">Dashboard</span>
                     </a>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-edit2"></span><span class="mtext">Data Instansi</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="form-basic.html">Data Rawat Jalan</a></li>
-                        <li><a href="advanced-components.html">Data Rawat Inap</a></li>
-                        <li><a href="form-wizard.html">Data Hemodialisa</a></li>
-                        <li><a href="html5-editor.html">Data OK</a></li>
-                    </ul>
-                </li>
+                <br>
                 <li>
-                    <a href="aa.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-library"></span><span class="mtext">Pengunjung</span>
+                    <div class="sidebar-small-cap">Pelayanan Medis</div>
+                </li>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'ARawatJalan' ? 'show' : '' ?>">
+                    <a href="index.php?m=ARawatJalan&s=ARawatJalan" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-stethoscope"></span><span class="mtext">Rawat Jalan</span>
                     </a>
                 </li>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'ARawatInap' ? 'show' : '' ?>">
+                    <a href="index.php?m=ARawatInap&s=ARawatInap" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-hospital"></span><span class="mtext">Rawat Inap</span>
+                    </a>
+                </li>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'AHemodialisa' ? 'show' : '' ?>">
+                    <a href="index.php?m=AHemodialisa&s=AHemodialisa" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-fuel"></span><span class="mtext">Hemodialisa</span>
+                    </a>
+                </li>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'ABedahCentral' ? 'show' : '' ?>">
+                    <a href="index.php?m=ABedahCentral&s=ABedahCentral" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-push-pin-1"></span><span class="mtext">Bedah Central (O.K)</span>
+                    </a>
+                </li>
+                <br>
                 <li>
-                    <a href="calendar.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-calendar1"></span><span class="mtext">Farmasi</span>
+                    <div class="sidebar-small-cap">Penunjang Medis</div>
+                </li>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'BFarmasi' ? 'show' : '' ?>">
+                    <a href="index.php?m=BFarmasi&s=BFarmasi" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-syringe"></span><span class="mtext">Farmasi</span>
                     </a>
                 </li>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'BLab' ? 'show' : '' ?>">
+                    <a href="index.php?m=BLab&s=BLab" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-billboard"></span><span class="mtext">Laboratorium</span>
+                    </a>
+                </li>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'BRadiologi' ? 'show' : '' ?>">
+                    <a href="index.php?m=BRadiologi&s=BRadiologi" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-target"></span><span class="mtext">Radiologi</span>
+                    </a>
+                </li>
+                <br>
                 <li>
-                    <a href="aa.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-paint-brush"></span><span class="mtext">Radiologi</span>
-                    </a>
+                    <div class="sidebar-small-cap">Tentang Aplikasi</div>
                 </li>
-                <li>
-                    <a href="aa.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-paint-brush"></span><span class="mtext">Laboratorium</span>
-                    </a>
-                </li>
-                <!-- 
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-analytics-21"></span><span class="mtext">Charts</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="highchart.html">Highchart</a></li>
-                        <li><a href="knob-chart.html">jQuery Knob</a></li>
-                        <li><a href="jvectormap.html">jvectormap</a></li>
-                        <li><a href="apexcharts.html">Apexcharts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-right-arrow1"></span><span class="mtext">Additional Pages</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="video-player.html">Video Player</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="forgot-password.html">Forgot Password</a></li>
-                        <li><a href="reset-password.html">Reset Password</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-browser2"></span><span class="mtext">Error Pages</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="400.html">400</a></li>
-                        <li><a href="403.html">403</a></li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="500.html">500</a></li>
-                        <li><a href="503.html">503</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-copy"></span><span class="mtext">Extra Pages</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="blank.html">Blank</a></li>
-                        <li><a href="contact-directory.html">Contact Directory</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                        <li><a href="product.html">Product</a></li>
-                        <li><a href="product-detail.html">Product Detail</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="pricing-table.html">Pricing Tables</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-list3"></span><span class="mtext">Multi Level Menu</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="javascript:;">Level 1</a></li>
-                        <li><a href="javascript:;">Level 1</a></li>
-                        <li><a href="javascript:;">Level 1</a></li>
-                        <li class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle">
-                                <span class="micon fa fa-plug"></span><span class="mtext">Level 2</span>
-                            </a>
-                            <ul class="submenu child">
-                                <li><a href="javascript:;">Level 2</a></li>
-                                <li><a href="javascript:;">Level 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="javascript:;">Level 1</a></li>
-                        <li><a href="javascript:;">Level 1</a></li>
-                        <li><a href="javascript:;">Level 1</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="sitemap.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-diagram"></span><span class="mtext">Sitemap</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="chat.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-chat3"></span><span class="mtext">Chat</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="invoice.html" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-invoice"></span><span class="mtext">Invoice</span>
-                    </a>
-                </li>
-                <li>
-                    <div class="dropdown-divider"></div>
-                </li> -->
-                <li>
-                    <div class="sidebar-small-cap">Extra</div>
-                </li>
-                <li>
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-edit-2"></span><span class="mtext">Documentation</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="introduction.html">Introduction</a></li>
-                        <li><a href="getting-started.html">Getting Started</a></li>
-                        <li><a href="color-settings.html">Color Settings</a></li>
-                        <li><a href="third-party-plugins.html">Third Party Plugins</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="https://dropways.github.io/deskapp-free-single-page-website-template/" target="_blank" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-paper-plane1"></span>
-                        <span class="mtext">Landing Page <img src="assets/vendors/images/coming-soon.png" alt="" width="25"></span>
+                <li class="dropdown <?= !empty($_GET['m']) && $_GET['m'] == 'Pabout' ? 'show' : '' ?>">
+                    <a href="index.php?m=Pabout&s=Pabout" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-question"></span><span class="mtext">Ehospital APD</span>
                     </a>
                 </li>
             </ul>
