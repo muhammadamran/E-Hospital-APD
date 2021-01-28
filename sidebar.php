@@ -46,8 +46,9 @@
                     <a href="aa.html" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-paint-brush"></span><span class="mtext">Laboratorium</span>
                     </a>
-                 </li>
-                <!-- <li class="dropdown">
+                </li>
+                <!-- 
+                <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
                         <span class="micon dw dw-analytics-21"></span><span class="mtext">Charts</span>
                     </a>
