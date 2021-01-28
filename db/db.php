@@ -4,10 +4,10 @@ $servername = "203.210.84.231:108";
 $username = "client";
 $password = "rskg";
 $dbname = "sik";
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "sik";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "sik";
 
 $db = new mysqli($servername, $username, $password, $dbname);
 
@@ -19,13 +19,13 @@ class helpers {
   function dateIndonesia($date) {
     $result = '';
     if(!empty($date) && $date !== '0000-00-00') {
-        $BulanIndo = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"); 
-        $tahun = substr($date, 0, 4);
-        $bulan = substr($date, 5, 2);
-        $tgl   = substr($date, 8, 2);
-     
-        $result = $tgl . " " . $BulanIndo[(int)$bulan-1] . " ". $tahun;
-        
+      $BulanIndo = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"); 
+      $tahun = substr($date, 0, 4);
+      $bulan = substr($date, 5, 2);
+      $tgl   = substr($date, 8, 2);
+      
+      $result = $tgl . " " . $BulanIndo[(int)$bulan-1] . " ". $tahun;
+      
     }
     return $result;
   }
@@ -33,13 +33,13 @@ class helpers {
   function dateTimeIndonesia($date) {
     $result = '';
     if(!empty($date) && $date !== '0000-00-00 00:00:00') {
-        $BulanIndo = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"); 
-        $tahun = substr($date, 0, 4);
-        $bulan = substr($date, 5, 2);
-        $tgl   = substr($date, 8, 2);
-     
-        $result = $tgl . " " . $BulanIndo[(int)$bulan-1] . " ". $tahun.' - '.substr($date, 11, 19);
-        
+      $BulanIndo = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"); 
+      $tahun = substr($date, 0, 4);
+      $bulan = substr($date, 5, 2);
+      $tgl   = substr($date, 8, 2);
+      
+      $result = $tgl . " " . $BulanIndo[(int)$bulan-1] . " ". $tahun.' - '.substr($date, 11, 19);
+      
     }
     return $result;
   }
