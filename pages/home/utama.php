@@ -148,6 +148,200 @@ if ($jam > '05:30' && $jam < '10:00') {
 				</tbody>
 			</table>
 		</div>
+		<!-- RAWAT JALAN -->
+		<div class="card-box mb-30">
+			<h2 class="h4 pd-20">Rawat Jalan</h2>
+			<table class="data-table table nowrap">
+				<thead>
+					<tr>
+						<th class="table-plus datatable-nosort">No.Identitas Pasien</th>
+						<th>Nama Pasien</th>
+						<th>No. Pendaftara</th>
+						<th>Jenis Kelas Pelayanan</th>
+						<th>Nama Ruangan</th>
+						<th class="datatable-nosort">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php 
+						$result = pg_query($pg, "SELECT pasien_id,nama_pasien,no_pendaftaran,kelaspelayanan_nama,ruangan_nama FROM infokunjunganrj_v ORDER BY no_identitas_pasien LIMIT 10");
+							while ($row = pg_fetch_assoc($result)) {
+					?>
+					<tr>
+					
+						<td class="table-plus">
+							<h5 class="font-16"><?= $row['pasien_id'] ?></h5>
+						</td>
+						<td><?= $row['nama_pasien'] ?></td>
+						<td><?= $row['no_pendaftaran'] ?></td>
+						<td><?= $row['kelaspelayanan_nama'] ?></td>
+						<td><?= $row['ruangan_nama'] ?></td>
+						<td>
+							<div class="dropdown">
+								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									<i class="dw dw-more"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+									<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+								</div>
+							</div>
+						</td>
+						
+					</tr>
+					<?php
+							}
+						?>
+				</tbody>
+			</table>
+		</div>
+		<!-- RAWAT INAP -->
+		<div class="card-box mb-30">
+			<h2 class="h4 pd-20">Rawat Inap</h2>
+			<table class="data-table table nowrap">
+				<thead>
+					<tr>
+						<th class="table-plus datatable-nosort">No.Identitas Pasien</th>
+						<th>Nama Pasien</th>
+						<th>No. Pendaftara</th>
+						<th>Jenis Kelas Pelayanan</th>
+						<th>Nama Ruangan</th>
+						<th class="datatable-nosort">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php 
+						$result = pg_query($pg, "SELECT pasien_id,nama_pasien,no_pendaftaran,kelaspelayanan_nama,ruangan_nama FROM infokunjunganri_v ORDER BY no_identitas_pasien LIMIT 10");
+							while ($row = pg_fetch_assoc($result)) {
+					?>
+					<tr>
+					
+						<td class="table-plus">
+							<h5 class="font-16"><?= $row['pasien_id'] ?></h5>
+						</td>
+						<td><?= $row['nama_pasien'] ?></td>
+						<td><?= $row['no_pendaftaran'] ?></td>
+						<td><?= $row['kelaspelayanan_nama'] ?></td>
+						<td><?= $row['ruangan_nama'] ?></td>
+						<td>
+							<div class="dropdown">
+								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									<i class="dw dw-more"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+									<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+								</div>
+							</div>
+						</td>
+						
+					</tr>
+					<?php
+							}
+						?>
+				</tbody>
+			</table>
+		</div>
+		<!-- HD -->
+		<div class="card-box mb-30">
+			<h2 class="h4 pd-20">HD</h2>
+			<table class="data-table table nowrap">
+				<thead>
+					<tr>
+						<th class="table-plus datatable-nosort">No.Identitas Pasien</th>
+						<th>Nama Pasien</th>
+						<th>No. Pendaftara</th>
+						<th>Jenis Kelas Pelayanan</th>
+						<th>Nama Ruangan</th>
+						<th class="datatable-nosort">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php 
+						$result = pg_query($pg, "SELECT pasien_id,nama_pasien,no_pendaftaran,kelaspelayanan_nama,ruangan_nama FROM infokunjunganhd_v ORDER BY no_identitas_pasien LIMIT 10");
+							while ($row = pg_fetch_assoc($result)) {
+					?>
+					<tr>
+					
+						<td class="table-plus">
+							<h5 class="font-16"><?= $row['pasien_id'] ?></h5>
+						</td>
+						<td><?= $row['nama_pasien'] ?></td>
+						<td><?= $row['no_pendaftaran'] ?></td>
+						<td><?= $row['kelaspelayanan_nama'] ?></td>
+						<td><?= $row['ruangan_nama'] ?></td>
+						<td>
+							<div class="dropdown">
+								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									<i class="dw dw-more"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+									<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+								</div>
+							</div>
+						</td>
+						
+					</tr>
+					<?php
+							}
+						?>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- OK -->
+		<div class="card-box mb-30">
+			<h2 class="h4 pd-20">OK</h2>
+			<table class="data-table table nowrap">
+				<thead>
+					<tr>
+						<th class="table-plus datatable-nosort">No.Identitas Pasien</th>
+						<th>Nama Pasien</th>
+						<th>No. Pendaftara</th>
+						<th>Jenis Kelas Pelayanan</th>
+						<th>Nama Ruangan</th>
+						<th class="datatable-nosort">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php 
+						$result = pg_query($pg, "SELECT pasien_id,nama_pasien,no_pendaftaran,kelaspelayanan_nama,ruangan_nama FROM laporankunjunganbedahsentral_v ORDER BY no_identitas_pasien LIMIT 10");
+							while ($row = pg_fetch_assoc($result)) {
+					?>
+					<tr>
+					
+						<td class="table-plus">
+							<h5 class="font-16"><?= $row['pasien_id'] ?></h5>
+						</td>
+						<td><?= $row['nama_pasien'] ?></td>
+						<td><?= $row['no_pendaftaran'] ?></td>
+						<td><?= $row['kelaspelayanan_nama'] ?></td>
+						<td><?= $row['ruangan_nama'] ?></td>
+						<td>
+							<div class="dropdown">
+								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									<i class="dw dw-more"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+									<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+								</div>
+							</div>
+						</td>
+						
+					</tr>
+					<?php
+							}
+						?>
+				</tbody>
+			</table>
+		</div>
+		<!--  -->
 		<div class="footer-wrap pd-20 mb-20 card-box">
 			DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
 		</div>
