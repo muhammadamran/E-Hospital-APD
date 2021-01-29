@@ -37,16 +37,72 @@
                     <table class="table hover multiple-select-row data-table-export nowrap">
                         <thead>
                             <tr>
-                                <th class="table-plus datatable-nosort">Name</th>
-                                <th>Age</th>
-                                <th>Office</th>
-                                <th>Address</th>
-                                <th>Start Date</th>
-                                <th>Salart</th>
+                                <th class="table-plus datatable-nosort">Tgl Pendaftaran</th>
+                                <th>Tgl Masuk Admisi</th>
+                                <th>Tgl Pulang</th>
+                                <th>Cara Masuk</th>
+                                <th>No. Pendaftaran</th>
+                                <th>No. RM</th>
+                                <th>Nama Pasien</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Umur</th>
+                                <th>DPJP</th>
+                                <th>Jenis Kasus Penyakit</th>
+                                <th>Nama Ruangan</th>
+                                <th>Kelas Pelayanan</th>
+                                <th>Status Periksa</th>
+                                <th>Status Pasien</th>
+                                <th>Status Masuk</th>
+                                <th>Asuransi</th>
+                                <th>Penjamin</th>
+                                <th>Kelompok Umur</th>
+                                <th>Cara Keluar</th>
+                                <th>Kondisi Keluar</th>
+                                <th class="datatable-nosort">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- DATA -->
+                            <?php 
+                            $result = pg_query($pg, "SELECT * FROM infokunjunganri_v WHERE tglpulang IS NULL ORDER BY tgl_pendaftaran DESC");
+                                while ($row = pg_fetch_assoc($result)) {
+                            ?>
+                            <tr>
+                                <td><?= $row['tgl_pendaftaran'] ?></td>
+                                <td><?= $row['tgladmisi'] ?></td>
+                                <td><?= $row['tglpulang'] == NULL ? "<i><font style='color:red;'>Masih Dirawat</font></i>" : $row['tglpulang'] ?></td>
+                                <td><?= $row['caramasuk_nama'] ?></td>
+                                <td><?= $row['no_pendaftaran'] ?></td>
+                                <td><?= $row['no_rekam_medik'] ?></td>
+                                <td><?= $row['namadepan'] ?> <?= $row['nama_pasien'] ?></td>
+                                <td><?= $row['jeniskelamin'] ?></td>
+                                <td><?= $row['umur'] ?></td>
+                                <td><?= $row['gelardepan'] ?><?= $row['nama_pegawai'] ?><?= $row['gelarbelakang_nama'] ?></td>
+                                <td><?= $row['jeniskasuspenyakit_nama'] ?></td>
+                                <td><?= $row['ruangan_nama'] ?></td>
+                                <td><?= $row['kelaspelayanan_nama'] ?></td>
+                                <td><?= $row['statusperiksa'] ?></td>
+                                <td><?= $row['statuspasien'] ?></td>
+                                <td><?= $row['statusmasuk'] ?></td>
+                                <td><?= $row['carabayar_nama'] ?></td>
+                                <td><?= $row['penjamin_nama'] ?></td>
+                                <td><?= $row['kelompokumur_nama'] ?></td>
+                                <td><?= $row['carakeluar_nama'] == NULL ? "<i><font style='color:red;'>Masih Dirawat</font></i>" : $row['carakeluar_nama'] ?></td>
+                                <td><?= $row['kondisikeluar_nama'] == NULL ? "<i><font style='color:red;'>Masih Dirawat</font></i>" : $row['kondisikeluar_nama'] ?></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                            <i class="dw dw-more"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                            <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+                                            <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+                                            <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php } ?>
                             <!-- END DATA -->
                         </tbody>
                     </table>
