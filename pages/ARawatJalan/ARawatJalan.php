@@ -33,6 +33,47 @@
                 <div class="pd-20">
                     <h4 class="text-blue h4">Pasien Rawat Jalan</h4>
                 </div>
+					<form>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Single Select</label>
+									<select class="custom-select2 form-control" name="state" style="width: 100%; height: 38px;">
+                                        <optgroup label="Jenis APD">
+                                        <?php 
+                                            $apdd = $db->query("SELECT * FROM tb_apd_role ORDER BY id DESC", 0);
+                                            while($apd = $apdd->fetch_assoc()) {
+                                        ?>
+                                            <option value="<?= $apd['role_apd'] ?>" name="apd"><?= $apd['role_apd'] ?></option>
+                                        
+                                        <?php
+                                            }
+                                        ?>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Multiple Select</label>
+									<select class="custom-select2 form-control" multiple="multiple" style="width: 100%;">
+                                    <optgroup label="Jenis APD">
+                                        <?php 
+                                            $apdd = $db->query("SELECT * FROM tb_apd_role ORDER BY id DESC", 0);
+                                            while($apd = $apdd->fetch_assoc()) {
+                                        ?>
+                                            <option value="<?= $apd['role_apd'] ?>"><?= $apd['role_apd'] ?></option>
+                                        
+                                        <?php
+                                            }
+                                        ?>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+						</div>
+					</form>
+                <!--  -->
                 <div class="pb-20">
                     <table class="table hover multiple-select-row data-table-export nowrap">
                         <thead>
