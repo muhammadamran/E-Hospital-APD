@@ -1,55 +1,102 @@
 // chart 1
-Highcharts.chart('chart1', {
+Highcharts.chart('chartCarabayar', {
 	title: {
-		text: 'Solar Employment Growth by Sector, 2010-2016'
+		text: 'Pasien Per Cara Bayar'
 	},
-	subtitle: {
-		text: 'Source: thesolarfoundation.com'
-	},
-	yAxis: {
-		title: {
-			text: 'Number of Employees'
-		}
-	},
-	chart: {
-		type: 'spline',
-	},
-	plotOptions: {
-		series: {
-			label: {
-				connectorAllowed: false
-			},
-			pointStart: 2010
-		},
-		spline: {
-			marker: {
-				enabled: false
-			}
-		}
+	xAxis: {
+		categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 	},
 	series: [{
-		name: 'Installation',
-		data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-	}, {
-		name: 'Manufacturing',
-		data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-	}, {
-		name: 'Sales & Distribution',
-		data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-	}, {
-		name: 'Project Development',
-		data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-	}, {
-		name: 'Other',
-		data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-	}],
-	responsive: {
-		rules: [{
-			condition: {
-				maxWidth: 500
-			}
-		}]
-	}
+		type: 'pie',
+		allowPointSelect: true,
+		keys: ['name', 'y', 'selected', 'sliced'],
+		data: [
+		['Apples', 29.9, false],
+		['Pears', 71.5, false],
+		['Oranges', 106.4, false],
+		['Plums', 129.2, false],
+		['Bananas', 144.0, false],
+		['Peaches', 176.0, false],
+		['Prunes', 135.6, true, true],
+		['Avocados', 148.5, false]
+		],
+		showInLegend: true
+	}]
+});
+
+Highcharts.chart('chartRuangan', {
+	title: {
+		text: 'Pasien Per Ruangan'
+	},
+	xAxis: {
+		categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	},
+	series: [{
+		type: 'pie',
+		allowPointSelect: true,
+		keys: ['name', 'y', 'selected', 'sliced'],
+		data: [
+		['Apples', 29.9, false],
+		['Pears', 71.5, false],
+		['Oranges', 106.4, false],
+		['Plums', 129.2, false],
+		['Bananas', 144.0, false],
+		['Peaches', 176.0, false],
+		['Prunes', 135.6, true, true],
+		['Avocados', 148.5, false]
+		],
+		showInLegend: true
+	}]
+});
+
+Highcharts.chart('chartKelas', {
+	title: {
+		text: 'Pasien Per Kelas'
+	},
+	xAxis: {
+		categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	},
+	series: [{
+		type: 'pie',
+		allowPointSelect: true,
+		keys: ['name', 'y', 'selected', 'sliced'],
+		data: [
+		['Apples', 29.9, false],
+		['Pears', 71.5, false],
+		['Oranges', 106.4, false],
+		['Plums', 129.2, false],
+		['Bananas', 144.0, false],
+		['Peaches', 176.0, false],
+		['Prunes', 135.6, true, true],
+		['Avocados', 148.5, false]
+		],
+		showInLegend: true
+	}]
+});
+
+Highcharts.chart('chartJeniskelamin', {
+	title: {
+		text: 'Pasien Per Jenis Kelamin'
+	},
+	xAxis: {
+		categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	},
+	series: [{
+		type: 'pie',
+		allowPointSelect: true,
+		keys: ['name', 'y', 'selected', 'sliced'],
+		data: [
+		['Apples', 29.9, false],
+		['Pears', 71.5, false],
+		['Oranges', 106.4, false],
+		['Plums', 129.2, false],
+		['Bananas', 144.0, false],
+		['Peaches', 176.0, false],
+		['Prunes', 135.6, true, true],
+		['Avocados', 148.5, false]
+		],
+		showInLegend: true
+	}]
 });
 
 // chart 2

@@ -77,7 +77,7 @@
                                 <td><?= $row['namadepan'] ?> <?= $row['nama_pasien'] ?></td>
                                 <td><?= $row['jeniskelamin'] ?></td>
                                 <td><?= $row['umur'] ?></td>
-                                <td><?= $row['gelardepan'] ?><?= $row['nama_pegawai'] ?><?= $row['gelarbelakang_nama'] ?></td>
+                                <td><?= $row['gelardepan'] ?><?= $row['nama_pegawai'] ?>,<?= $row['gelarbelakang_nama'] ?></td>
                                 <td><?= $row['jeniskasuspenyakit_nama'] ?></td>
                                 <td><?= $row['ruangan_nama'] ?></td>
                                 <td><?= $row['kelaspelayanan_nama'] ?></td>
