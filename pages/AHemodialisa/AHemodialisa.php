@@ -5,12 +5,20 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <div class="title">
-                            <h3><span class="micon dw dw-fuel"></span> Hemodialisa</h3>
+                            <h3><span class="micon dw dw-fuel"></span> Graph Hemodialisa</h3>
                         </div>
                         <nav aria-label="breadcrumb" role="navigation">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Hemodialisa</li>
+                                <li class="breadcrumb-item active" aria-current="page">Table Hemodialisa</li>
+                            </ol>
+                            <hr>
+                            <ol class="breadcrumb">
+                                <?php
+                                    $result_t = pg_query($pg, "SELECT COUNT(*) AS jumlah FROM infokunjunganhd_v WHERE DATE(tgl_pendaftaran) = CURRENT_DATE");
+                                    $row_t = pg_fetch_assoc($result_t);
+                                ?>
+                                <li class="breadcrumb-item"><h5>Jumlah Pasien HD <?= tanggal_indo(date('Y-m-d'));?> - <?= $row_t['jumlah']; ?> Pasien</h5> </li>
                             </ol>
                         </nav>
                     </div>
@@ -20,64 +28,34 @@
                                 Klik Disini
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#">Export List</a>
-                                <a class="dropdown-item" href="#">Policies</a>
-                                <a class="dropdown-item" href="#">View Assets</a>
+                                <a class="dropdown-item" href="index.php?m=AHemodialisa&s=AHemodialisa">Lihat Graph</a>
+                                <a class="dropdown-item" href="index.php?m=AHemodialisa&s=AHemodialisa_T">Lihat Table Data</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Export Datatable start -->
-            <div class="card-box mb-30">
-                <div class="pd-20">
-                    <h4 class="text-blue h4">Pasien Hemodialisa</h4>
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="bg-white pd-20 card-box mb-30">
+                        <div id="chartCarabayar"></div>
+                    </div>
                 </div>
-                <div class="pb-20">
-                    <table class="table hover multiple-select-row data-table-export nowrap">
-                        <thead>
-                            <tr>
-                                <th class="table-plus datatable-nosort">ID</th>
-                                <th>No. Pendaftaran</th>
-                                <th>No. Rekam Medis</th>
-                                <th>Nama Pasien</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Kelas Pelayanan</th>
-                                <th>Nama Ruangan</th>
-                                <th class="datatable-nosort">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- DATA -->
-                            <?php 
-                            $result = pg_query($pg, "SELECT * FROM infokunjunganhd_v WHERE statusperiksa='ANTRIAN' ORDER BY tgl_pendaftaran DESC");
-                                while ($row = pg_fetch_assoc($result)) {
-                            ?>
-                            <tr>
-                                <td><?= $row['pasien_id'] ?></td>
-                                <td><?= $row['no_pendaftaran'] ?></td>
-                                <td><?= $row['no_rekam_medik'] ?></td>
-                                <td><?= $row['namadepan'] ?> <?= $row['nama_pasien'] ?></td>
-                                <td><?= $row['jeniskelamin'] ?></td>
-                                <td><?= $row['kelaspelayanan_nama'] ?></td>
-                                <td><?= $row['ruangan_nama'] ?></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                                            <i class="dw dw-more"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                                            <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-                                            <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-                                            <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <?php } ?>
-                            <!-- END DATA -->
-                        </tbody>
-                    </table>
+                <div class="col-xl-6">
+                    <div class="bg-white pd-20 card-box mb-30">
+                        <div id="chartRuangan"></div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="bg-white pd-20 card-box mb-30">
+                        <div id="chartKelas"></div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="bg-white pd-20 card-box mb-30">
+                        <div id="chartJeniskelamin"></div>
+                    </div>
                 </div>
             </div>
             <!-- Export Datatable End -->

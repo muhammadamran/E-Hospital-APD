@@ -3,7 +3,7 @@
         </div>
     </div>
 </div>
-    <script src="assets/vendors/scripts/core.js"></script>
+<script src="assets/vendors/scripts/core.js"></script>
     <script src="assets/vendors/scripts/script.min.js"></script>
     <script src="assets/vendors/scripts/process.js"></script>
     <script src="assets/vendors/scripts/layout-settings.js"></script>
@@ -21,5 +21,11 @@
 	<script src="assets/src/plugins/datatables/js/pdfmake.min.js"></script>
 	<script src="assets/src/plugins/datatables/js/vfs_fonts.js"></script>
 	<script src="assets/vendors/scripts/datatable-setting.js"></script>
+
+
+	<script src="assets/src/plugins/highcharts-6.0.7/code/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+	<script src="assets/src/plugins/highcharts-6.0.7/code/highcharts-more.js"></script>
+	<script src="assets/vendors/scripts/highchart-setting.js"></script>
 </body>
 </html>

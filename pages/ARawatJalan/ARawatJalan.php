@@ -78,30 +78,49 @@
                     <table class="table hover multiple-select-row data-table-export nowrap">
                         <thead>
                             <tr>
-                                <th class="table-plus datatable-nosort">ID</th>
+                                <th class="table-plus datatable-nosort">Tgl Pendaftaran</th>
                                 <th>No. Pendaftaran</th>
-                                <th>No. Rekam Medis</th>
+                                <th>No. RM</th>
                                 <th>Nama Pasien</th>
                                 <th>Jenis Kelamin</th>
-                                <th>Kelas Pelayanan</th>
+                                <th>Umur</th>
+                                <th>DPJP</th>
+                                <th>Jenis Kasus Penyakit</th>
                                 <th>Nama Ruangan</th>
+                                <th>Kelas Pelayanan</th>
+                                <th>Status Periksa</th>
+                                <th>Status Pasien</th>
+                                <th>Status Masuk</th>
+                                <th>Asuransi</th>
+                                <th>Penjamin</th>
+                                <th>Kelompok Umur</th>
                                 <th class="datatable-nosort">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- DATA -->
                             <?php 
-                            $result = pg_query($pg, "SELECT pasien_id,namadepan,nama_pasien,jeniskelamin,no_rekam_medik,no_pendaftaran,kelaspelayanan_nama,ruangan_nama,tgl_pendaftaran FROM infokunjunganrj_v ORDER BY tgl_pendaftaran DESC LIMIT 10");
+                            $tgl = date('Y-m-d');
+                            $result = pg_query($pg, "SELECT * FROM infokunjunganrj_v WHERE DATE(tgl_pendaftaran) = CURRENT_DATE ORDER BY tgl_pendaftaran DESC");
                                 while ($row = pg_fetch_assoc($result)) {
                             ?>
                             <tr>
-                                <td><?= $row['pasien_id'] ?></td>
+                                <td><?= $row['tgl_pendaftaran'] ?></td>
                                 <td><?= $row['no_pendaftaran'] ?></td>
                                 <td><?= $row['no_rekam_medik'] ?></td>
                                 <td><?= $row['namadepan'] ?> <?= $row['nama_pasien'] ?></td>
                                 <td><?= $row['jeniskelamin'] ?></td>
-                                <td><?= $row['kelaspelayanan_nama'] ?></td>
+                                <td><?= $row['umur'] ?></td>
+                                <td><?= $row['gelardepan'] ?><?= $row['nama_pegawai'] ?>,<?= $row['gelarbelakang_nama'] ?></td>
+                                <td><?= $row['jeniskasuspenyakit_nama'] ?></td>
                                 <td><?= $row['ruangan_nama'] ?></td>
+                                <td><?= $row['kelaspelayanan_nama'] ?></td>
+                                <td><?= $row['statusperiksa'] ?></td>
+                                <td><?= $row['statuspasien'] ?></td>
+                                <td><?= $row['statusmasuk'] ?></td>
+                                <td><?= $row['carabayar_nama'] ?></td>
+                                <td><?= $row['penjamin_nama'] ?></td>
+                                <td><?= $row['golonganumur_nama'] ?></td>
                                 <td>
                                     <div class="dropdown">
                                         <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
