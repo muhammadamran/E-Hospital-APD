@@ -37,16 +37,44 @@
                     <table class="table hover multiple-select-row data-table-export nowrap">
                         <thead>
                             <tr>
-                                <th class="table-plus datatable-nosort">Name</th>
-                                <th>Age</th>
-                                <th>Office</th>
-                                <th>Address</th>
-                                <th>Start Date</th>
-                                <th>Salart</th>
+                                <th class="table-plus datatable-nosort">ID</th>
+                                <th>No. Pendaftaran</th>
+                                <th>No. Rekam Medis</th>
+                                <th>Nama Pasien</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Kelas Pelayanan</th>
+                                <th>Nama Ruangan</th>
+                                <th class="datatable-nosort">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- DATA -->
+                            <?php 
+                            $result = pg_query($pg, "SELECT pasien_id,namadepan,nama_pasien,jeniskelamin,no_rekam_medik,no_pendaftaran,kelaspelayanan_nama,ruangan_nama,tgl_pendaftaran FROM infokunjunganrj_v ORDER BY tgl_pendaftaran DESC LIMIT 10");
+                                while ($row = pg_fetch_assoc($result)) {
+                            ?>
+                            <tr>
+                                <td><?= $row['pasien_id'] ?></td>
+                                <td><?= $row['no_pendaftaran'] ?></td>
+                                <td><?= $row['no_rekam_medik'] ?></td>
+                                <td><?= $row['namadepan'] ?> <?= $row['nama_pasien'] ?></td>
+                                <td><?= $row['jeniskelamin'] ?></td>
+                                <td><?= $row['kelaspelayanan_nama'] ?></td>
+                                <td><?= $row['ruangan_nama'] ?></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                            <i class="dw dw-more"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                            <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+                                            <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+                                            <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php } ?>
                             <!-- END DATA -->
                         </tbody>
                     </table>
