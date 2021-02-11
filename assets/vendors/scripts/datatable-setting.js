@@ -69,15 +69,15 @@ $('document').ready(function(){
 				previous: '<i class="ion-chevron-left"></i>'  
 			}
 		},
-		'columnDefs': [{
-			'targets': 0,
-			'searchable': false,
-			'orderable': false,
-			'className': 'dt-body-center',
-			'render': function (data, type, full, meta){
-				return '<div class="dt-checkbox"><input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '"><span class="dt-checkbox-label"></span></div>';
-			}
-		}],
+		// 'columnDefs': [{
+		// 	'targets': 0,
+		// 	'searchable': false,
+		// 	'orderable': false,
+		// 	'className': 'dt-body-center',
+		// 	'render': function (data, type, full, meta){
+		// 		return '<div class="dt-checkbox"><input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '"><span class="dt-checkbox-label"></span></div>';
+		// 	}
+		// }],
 		'order': [[1, 'asc']]
 	});
 
